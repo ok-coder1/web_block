@@ -1,6 +1,6 @@
 import platform
-from pathlib import Path
-from tempfile import mkstemp
+# from pathlib import Path
+# from tempfile import mkstemp
 
 hosts = {
     "Windows": r"C:\Windows\System32\drivers\etc\hosts",  # Windows (aka NT)
@@ -25,7 +25,8 @@ def block(websites):
                 print(f"{site} has already been blocked.")
 
 
-'''def unblock(websites):
+'''
+    def unblock(websites):
     sites_to_unblock = list(websites.split(" "))
     filepath = hosts[platform.system()]
     tmp_fd, tmp_path = mkstemp(prefix=".web_block.", text=True)
@@ -36,4 +37,5 @@ def block(websites):
                 next(host_file)
                 continue
             tmp_file.write(line)
-    tmp_path.replace(filepath)'''
+    tmp_path.replace(filepath)
+'''
