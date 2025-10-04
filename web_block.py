@@ -20,7 +20,7 @@ def block(websites):
         if hosts_file.exists(names = [domain]):
             print(f"{domain} has already been blocked.")
         else:
-            hosts_entry = HostsEntry(entry_type = "ipv4", address = "127.0.0.1", names = [domain], comment = "web_block")
+            hosts_entry = HostsEntry(entry_type = "ipv4", address = localhost, names = [domain], comment = "web_block")
             hosts_file.add([hosts_entry])
             hosts_file.write()
             print(f"Blocked {domain}.")
