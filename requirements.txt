@@ -1,0 +1,5 @@
+# URL parsers
+tldextract
+
+# Hosts file manager
+python-hosts
