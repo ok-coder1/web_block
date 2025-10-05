@@ -4,10 +4,10 @@ from python_hosts import Hosts, HostsEntry
 import pyuac
 
 hosts = {
-    "Windows": r"C:\Windows\System32\drivers\etc\hosts",  # Windows (aka NT)
+    "Darwin":   "/etc/hosts",                             # macOS
     "Linux":    "/etc/hosts",                             # Linux (any distro)
     "SunOS":    "/etc/hosts",                             # Solaris
-    "Darwin":   "/etc/hosts"                              # macOS
+    "Windows": r"C:\Windows\System32\drivers\etc\hosts"   # Windows (aka NT)
 }
 hosts_file = Hosts(path = hosts[platform.system()])
 localhost = "127.0.0.1"
