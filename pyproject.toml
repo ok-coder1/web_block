@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "web_block"
-version = "1.0.0"
+version = "1.0.1"
 requires-python = ">= 3.9"
 authors = [
     { name = "okcoder1", email = "codershub.code@gmail.com" }
@@ -42,8 +42,9 @@ classifiers = [
     "Topic :: Utilities"
 ]
 dependencies = [
-    "tldextract",
-    "python-hosts"
+    "python-hosts",
+    "pyuac",
+    "tldextract"
 ]
 [project.urls]
 Homepage = "https://github.com/ok-coder1/web_block"

@@ -3,3 +3,6 @@ tldextract
 
 # Hosts file manager
 python-hosts
+
+# UAC manager/Elevate permissions
+pyuac

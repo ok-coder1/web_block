@@ -1,6 +1,7 @@
 import platform
 import tldextract
 from python_hosts import Hosts, HostsEntry
+import pyuac
 
 hosts = {
     "Windows": r"C:\Windows\System32\drivers\etc\hosts",  # Windows (aka NT)
@@ -22,8 +23,14 @@ def block(websites):
         else:
             hosts_entry = HostsEntry(entry_type = "ipv4", address = localhost, names = [domain], comment = "web_block")
             hosts_file.add([hosts_entry])
-            hosts_file.write()
-            print(f"Blocked {domain}.")
+            if not pyuac.isUserAdmin():
+                if platform.system() == "Windows":
+                    pyuac.runAsAdmin()
+                else:
+                    print("Insufficient permissions. Try running using `sudo`.")
+            else:
+                hosts_file.write()
+                print(f"Blocked {domain}.")
 
 
 def unblock(websites):
@@ -33,7 +40,13 @@ def unblock(websites):
         domain = site.domain + "." + site.suffix
         if hosts_file.exists(names = [domain]):
             hosts_file.remove_all_matching(name = domain)
-            hosts_file.write()
-            print(f"Unblocked {domain}.")
+            if not pyuac.isUserAdmin():
+                if platform.system() == "Windows":
+                    pyuac.runAsAdmin()
+                else:
+                    print("Insufficient permissions. Try running using `sudo`.")
+            else:
+                hosts_file.write()
+                print(f"Unblocked {domain}.")
         else:
             print(f"{domain} has already been unblocked.")
