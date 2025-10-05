@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "web_block"
-version = "1.0.1"
+version = "1.0.2"
 requires-python = ">= 3.9"
 authors = [
     { name = "okcoder1", email = "codershub.code@gmail.com" }
