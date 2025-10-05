@@ -1,6 +1,12 @@
+[build-system]
+requires = [
+    "hatchling"
+]
+build-backend = "hatchling.build"
+
 [project]
 name = "web_block"
-version = "0.1.0"
+version = "1.0.0"
 requires-python = ">= 3.9"
 authors = [
     { name = "okcoder1", email = "codershub.code@gmail.com" }
@@ -11,9 +17,11 @@ maintainers = [
 description = "A simple Python module to block websites."
 readme = "README.md"
 license = "MIT"
-license-files = "LICENSE.md"
+license-files = [
+    "LICENSE.md"
+]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",

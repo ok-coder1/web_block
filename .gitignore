@@ -208,11 +208,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Flake8
-tox.ini
-setup.cfg
-.flake8
-
 # macOS
 .DS_Store
 
