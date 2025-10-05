@@ -222,3 +222,6 @@ __marimo__/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Secrets
+api_key.txt
