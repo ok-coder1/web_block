@@ -1,7 +1,7 @@
 from platform import system
-from tldextract import extract
 from python_hosts import Hosts, HostsEntry
 from pyuac import isUserAdmin, runAsAdmin
+from tldextract import extract
 
 hosts = {
     "Darwin":   "/etc/hosts",                             # macOS
