@@ -9,11 +9,11 @@ PyPI here: https://pypi.org/project/web-block
 ### Blocking websites
 ```py
 import web_block
-web_block.block("example.com example.org") # Use spaces to separate websites.
+web_block.block("example.com example.org") # Use spaces to separate websites
 ```
 It's as simple as that.
 ### Unblocking websites
 ```py
 import web_block
-web_block.unblock("example.com example.org") # You can also use `https://www.example.com/abcd.html` and it will automatically get the domain for you.
+web_block.unblock("example.com example.org") # You can also use `https://www.example.com/abcd.html`
 ```
